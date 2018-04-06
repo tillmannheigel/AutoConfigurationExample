@@ -19,12 +19,13 @@ public class ExampleAutoConfiguration {
         return 42L;
     }
 
+
     @Bean
     @ConditionalOnProperty(
-            name = "aDouble",
+            name = "isRomeReallyNecessaryForThisApplication",
             havingValue = "true")
     @ConditionalOnMissingBean
-    public Double aDouble() {
-        return 42D;
+    public Double creationOfRome() {
+        return 753D;
     }
 }
